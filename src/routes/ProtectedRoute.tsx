@@ -1,6 +1,6 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 
-// Dummy auth and role check (replace with your real logic)
+// Dummy auth and role check
 const useAuth = () => {
   // Example: get auth state from context or localStorage
   const user = JSON.parse(localStorage.getItem('user') || 'null')
