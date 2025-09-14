@@ -41,6 +41,7 @@ import Register from './pages/auth/Register'
 import ForgotPassword from './pages/auth/ForgotPassword'
 
 import './App.css'
+import RegisterClinic from './pages/clinic/ClinicRegistration'
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+        <Route path="/auth/register-clinic" element={<RegisterClinic/>}/>
 
         {/* Protected Patient routes */}
         <Route element={<ProtectedRoute allowedRoles={['patient']} />}>
@@ -78,6 +80,7 @@ function App() {
         {/* Protected Clinic routes */}
         <Route element={<ProtectedRoute allowedRoles={['clinic']} />}>
           <Route element={<Layout />}>
+          
             <Route path="clinic/dashboard" element={<ClinicDashboard />} />
             <Route path="clinic/doctor-management" element={<DoctorManagement />} />
             <Route path="clinic/appointment-management" element={<AppointmentManagement />} />
