@@ -6,8 +6,8 @@ import { registerClinic } from '../../services/ClinicService'
     
 const RegisterClinic = () => {
   const [name, setName] = useState('')
-  const [address, setAddress] = useState('')
-  const mutation = useMutation({ mutationFn: () => registerClinic({ name, address, phone, email, password }) })
+  const [location, setLocation] = useState('')
+  const mutation = useMutation({ mutationFn: () => registerClinic({ name, location, phone, email, password }) })
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -23,7 +23,7 @@ const RegisterClinic = () => {
         <Typography variant="h6" mb={2}>Register Clinic</Typography>
         <form onSubmit={handleSubmit}>
           <TextField label="Clinic Name" fullWidth required value={name} onChange={e => setName(e.target.value)} margin="normal" />
-          <TextField label="Address" fullWidth required value={address} onChange={e => setAddress(e.target.value)} margin="normal" />
+          <TextField label="Location" fullWidth required value={location} onChange={e => setLocation(e.target.value)} margin="normal" />
           <TextField label="Phone Number" fullWidth required value={phone} onChange={e => setPhone(e.target.value)} margin="normal" />
           <TextField label="Email" type="email" fullWidth required value={email} onChange={e => setEmail(e.target.value)} margin="normal" />
 
