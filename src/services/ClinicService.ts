@@ -2,7 +2,7 @@ import axios from 'axios'
 import { privateApi, publicApi } from './api/apiClient';
 const API = axios.create({ baseURL: import.meta.env.VITE_API_BASE_URL })
 
-export const registerClinic = async (data: { name: string; location: string, phone: any, email: any, password: any }) => {
+export const registerClinic = async (data: any) => {
   await publicApi.post('/clinics/register', data).then(res => res.data)
 }
 
