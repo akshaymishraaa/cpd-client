@@ -4,8 +4,8 @@ const API = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
 })
 
-export const login = async (data: { identifier: string; password: string }) => {
-  const res = await API.post('/auth/login', data)
+export const login = async (data: { email: string; password: string }) => {
+  const res = await API.post('/clinics/auth/login', data)
   return res.data
 }
 

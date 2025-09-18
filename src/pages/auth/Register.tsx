@@ -19,7 +19,7 @@ const Register = () => {
   }
 
   return (
-    <Box sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#f5f6fa',width:'100vw' }}>
+    <Box sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',width:'100vw' }}>
       <Paper elevation={3} sx={{ p: 4, width: 350 }}>
         <Typography variant="h5" mb={2} align="center">Register</Typography>
         <form onSubmit={handleSubmit}>
